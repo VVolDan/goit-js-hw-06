@@ -4,15 +4,14 @@ const colorValue = document.querySelector('span.color');
 
 buttonChangeColor.addEventListener('click', onButtonChangeColor);
 
-function onButtonChangeColor(event) {
-  const randomColor = getRandomHexColor(event);
+function onButtonChangeColor() {
+  const randomColor = getRandomHexColor();
 
   colorValue.textContent = randomColor;
   body.style.backgroundColor = randomColor;
 }
 
-function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-};
+const getRandomHexColor = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+
 
 

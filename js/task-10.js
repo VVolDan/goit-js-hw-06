@@ -32,7 +32,7 @@ function createBoxes(amount) {
   return boxes.join('');
 };
 
-function onCreateBtn(event) {
+function onCreateBtn() {
   refs.areaOfBoxes.innerHTML= createBoxes(amount);
 }
 

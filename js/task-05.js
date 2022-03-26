@@ -5,5 +5,8 @@ input.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
     const name = event.currentTarget.value;
-    name ? output.textContent = name : output.textContent = 'Anonymous';
+    if (name)
+        output.textContent = name;
+    else
+        output.textContent = 'Anonymous';
 };
