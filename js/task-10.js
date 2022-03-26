@@ -15,7 +15,7 @@ function getRandomHexColor() {
 };
 
 let boxes = [...refs.amountOfBoxes.children];
-let initialAmount = boxes.length;
+let initialAmount = +boxes.length;
 let amount;
 
 refs.amountOfBoxes.addEventListener('input', onFormInput);
