@@ -1,6 +1,6 @@
 const refs = {
     input: document.querySelector('#font-size-control'),
-    phrase: document.querySelector('#text'),
+    phrase: document.querySelector('#text')
 }
 
 refs.phrase.style.fontSize = `${refs.input.value}px`; 
