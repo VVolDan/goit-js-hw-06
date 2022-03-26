@@ -40,7 +40,7 @@ refs.createBtn.addEventListener('click', onCreateBtn);
 
 // Destroing of boxes;
 
-refs.destroyBtn.addEventListener('click', destroyBoxes)
+refs.destroyBtn.addEventListener('click', destroyBoxes);
 
 function destroyBoxes() {
   refs.areaOfBoxes.innerHTML = "";
@@ -48,5 +48,3 @@ function destroyBoxes() {
   amount = 0;
 }
 
-const number = document.querySelector('input').value;
-console.log(number);
