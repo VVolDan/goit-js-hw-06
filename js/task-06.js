@@ -6,5 +6,8 @@ function onInputBorderChange(event) {
     const text = event.currentTarget.value;
     
     input.classList.remove('invalid', 'valid');
-    text.length === +input.dataset.length ? input.classList.add('valid') : input.classList.add('invalid');
-}
+    if (text.length === +input.dataset.length) 
+        input.classList.add('valid');
+    else
+        input.classList.add('invalid');
+};

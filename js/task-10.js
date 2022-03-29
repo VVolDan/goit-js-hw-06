@@ -2,7 +2,7 @@ const refs = {
   amountOfBoxes: document.querySelector('input'),
   createBtn: document.querySelector('[data-create]'),
   destroyBtn: document.querySelector('[data-destroy]'),
-  areaOfBoxes: document.querySelector('div#boxes'),
+  areaOfBoxes: document.getElementById('boxes'),
 };
 
 
@@ -14,8 +14,8 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 };
 
-let boxes = [...refs.amountOfBoxes.children];
-let initialAmount = +boxes.length;
+let boxes = [...refs.areaOfBoxes.children];
+let initialAmount=0;
 let amount;
 
 refs.amountOfBoxes.addEventListener('input', onFormInput);
@@ -30,14 +30,16 @@ function createBoxes(amount) {
     const box = `<div style="background-color: ${getRandomHexColor()}; width:${(30 + 10*(i+initialAmount))}px; height:${(30 + 10*(i+initialAmount))}px"></div>`;
     boxes.push(box);
   }  
+  initialAmount = boxes.length;
   return boxes.join('');
 };
 
 function onCreateBtn() {
-  refs.areaOfBoxes.innerHTML= createBoxes(amount);
+  refs.areaOfBoxes.innerHTML = createBoxes(amount);
 }
 
 refs.createBtn.addEventListener('click', onCreateBtn);
+
 
 // Destroing of boxes;
 
